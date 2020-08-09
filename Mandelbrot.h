@@ -1,25 +1,20 @@
-//
-// Created by Sachin on 8/9/20.
-//
-
-#ifndef MANDELBROT_MANDELBROT_H
-#define MANDELBROT_MANDELBROT_H
+#ifndef MANDELBROT_H_
+#define MANDELBROT_H_
 
 namespace mandelbrot {
-    class Mandelbrot {
 
+    class Mandelbrot {
     public:
         static const int MAX_ITERATIONS = 1000;
+
     public:
         Mandelbrot();
 
-        virtual  ~Mandelbrot() = default;
+        virtual ~Mandelbrot();
 
         static int getIterations(double x, double y);
-
     };
 
-}
+} /* namespace mandelbrot */
 
-
-#endif //MANDELBROT_MANDELBROT_H
+#endif /* MANDELBROT_H_ */

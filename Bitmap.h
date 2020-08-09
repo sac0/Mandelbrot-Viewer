@@ -1,20 +1,21 @@
-//
-// Created by Sachin on 7/28/20.
-//
-
-#ifndef MANDELBROT_BITMAP_H
-#define MANDELBROT_BITMAP_H
+#ifndef BITMAP_H_
+#define BITMAP_H_
 
 #include <string>
 #include <cstdint>
+#include <memory>
 
 using namespace std;
 
 namespace mandelbrot {
+
     class Bitmap {
     private:
-        int m_width{0}, m_height{0};
+        int m_width{0};
+        int m_height{0};
         unique_ptr<uint8_t[]> m_pPixels{nullptr};
+
+
     public:
         Bitmap(int width, int height);
 
@@ -22,10 +23,9 @@ namespace mandelbrot {
 
         bool write(string filename);
 
-        virtual ~Bitmap() = default;
+        virtual ~Bitmap();
     };
 
-}
+} /* namespace mandelbrot */
 
-
-#endif //MANDELBROT_BITMAP_H
+#endif /* BITMAP_H_ */
